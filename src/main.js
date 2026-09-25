@@ -1,9 +1,5 @@
 import "./styles/style.css";
+import { createLead } from "./scripts/lead";
 
-function getUserName() {
-  const user = window.WebApp?.initDataUnsafe?.user;
-  return [user?.first_name, user?.last_name].filter(Boolean).join(" ");
-}
-
-const name = getUserName();
-console.log("name:", name);
+const lead = await createLead();
+console.log("lead:", lead);
